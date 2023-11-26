@@ -7,11 +7,6 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-// Handler untuk route root '/'
-app.get("/", (req, res) => {
-  res.send("Selamat datang di server Anda!"); // Pesan sambutan saat mengakses root route
-});
-
 app.get("/api", (req, res) => {
   res.json([
     {
@@ -32,5 +27,5 @@ app.get("/api", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+    console.log(`Server running at http://localhost:${port}`);
+  });
